@@ -1,13 +1,12 @@
 "use client";
 
-import React from "react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Autoplay from "embla-carousel-autoplay";
 
 const testimonials = [
@@ -15,28 +14,28 @@ const testimonials = [
     name: "Sarah Johnson",
     role: "Marketing Manager",
     content:
-      "Schedulrr has transformed how I manage my team's meetings. It's intuitive and saves us hours every week!",
+      "TickIt has transformed how I manage my tasks and team's meetings. It's intuitive and saves us hours every week!",
     image: "https://i.pravatar.cc/150?img=1",
   },
   {
     name: "David Lee",
     role: "Freelance Designer",
     content:
-      "As a freelancer, Schedulrr helps me stay organized and professional. My clients love how easy it is to book time with me.",
+      "As a freelancer, TickIt helps me stay organized and professional. My clients love how easy it is to book time with me.",
     image: "https://i.pravatar.cc/150?img=2",
   },
   {
     name: "Emily Chen",
     role: "Startup Founder",
     content:
-      "Schedulrr streamlined our hiring process. Setting up interviews has never been easier!",
+      "TickIt streamlined our hiring process. Setting up interviews has never been easier!",
     image: "https://i.pravatar.cc/150?img=3",
   },
   {
     name: "Michael Brown",
     role: "Sales Executive",
     content:
-      "I've seen a 30% increase in my meeting bookings since using Schedulrr. It's a game-changer for sales professionals.",
+      "I've seen a 30% increase in my meeting bookings since using TickIt. It's a game-changer for sales professionals.",
     image: "https://i.pravatar.cc/150?img=4",
   },
 ];

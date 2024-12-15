@@ -13,8 +13,8 @@ async function Header() {
     <nav className="mx-auto py-2 px-4 flex justify-between items-center shadow-md border-b-2">
       <Link href="/" className="flex items-center">
         <Image
-          src="/logo.png"
-          width="150"
+          src="/Design.png"
+          width="250"
           height="60"
           alt="Schedulrr Logo"
           className="h-16 w-auto"

@@ -1,7 +1,7 @@
 import TestimonialsCarousel from "@/components/testimonials";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Calendar, Clock, LinkIcon } from "lucide-react";
+import { ArrowRight, Calendar, Clock, LinkIcon, ListTodo } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -10,6 +10,11 @@ const features = [
     icon: Calendar,
     title: "Create Events",
     description: "Easily set up and customize your event types",
+  },
+  {
+    icon: ListTodo,
+    title: "Create Tasks",
+    description: "Easily set up and customize your Tasks",
   },
   {
     icon: Clock,
@@ -24,7 +29,11 @@ const features = [
 ];
 
 const howItWorks = [
-  { step: "Sign Up", description: "Create your free Schedulrr account" },
+  { step: "Sign Up", description: "Create your free account" },
+  {
+    step: "Create Task",
+    description: "Create Your Tasks Your want to do",
+  },
   {
     step: "Set Availability",
     description: "Define when you're available for meetings",
@@ -72,15 +81,15 @@ const Home = () => {
 
       {/* Key Features Section */}
       <div className="mb-24">
-        <h2 className="text-3xl font-bold text-center mb-12 text-blue-600">
+        <h2 className="text-3xl font-bold text-center mb-12 text-orange-600">
           Key Features
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <Card key={index}>
               <CardHeader>
-                <feature.icon className="w-12 h-12 text-blue-500 mb-4 mx-auto" />
-                <CardTitle className="text-center text-blue-600">
+                <feature.icon className="w-12 h-12 text-orange-600 mb-4 mx-auto" />
+                <CardTitle className="text-center text-orange-600">
                   {feature.title}
                 </CardTitle>
               </CardHeader>
@@ -96,7 +105,7 @@ const Home = () => {
 
       {/* Testimonials Section */}
       <div className="mb-24">
-        <h2 className="text-3xl font-bold text-center mb-12 text-blue-600">
+        <h2 className="text-3xl font-bold text-center mb-12 text-orange-500">
           What Our Users Say
         </h2>
         <TestimonialsCarousel />
@@ -104,14 +113,14 @@ const Home = () => {
 
       {/* How It Works Section */}
       <div className="mb-24">
-        <h2 className="text-3xl font-bold text-center mb-12 text-blue-600">
+        <h2 className="text-3xl font-bold text-center mb-12 text-orange-500">
           How It Works
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {howItWorks.map((step, index) => (
             <div key={index} className="text-center">
-              <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <span className="text-blue-600 font-bold text-xl">
+              <div className="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <span className="text-orange-600 font-bold text-xl">
                   {index + 1}
                 </span>
               </div>
@@ -123,7 +132,7 @@ const Home = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-blue-600 text-white rounded-lg p-8 text-center">
+      <div className="bg-orange-600 text-white rounded-lg p-8 text-center">
         <h2 className="text-3xl font-bold mb-4">
           Ready to Simplify Your Task?
         </h2>
@@ -132,7 +141,7 @@ const Home = () => {
           management.
         </p>
         <Link href={"/dashboard"}>
-          <Button size="lg" variant="secondary" className="text-blue-600">
+          <Button size="lg" variant="secondary" className="text-orange-500">
             Start For Free <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </Link>

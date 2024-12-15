@@ -1,8 +1,8 @@
 "use server";
 
+import { eventSchema } from "@/app/lib/validators";
 import { db } from "@/lib/prisma";
 import { auth } from "@clerk/nextjs/server";
-import { eventSchema } from "@/app/lib/validators";
 
 export async function createEvent(data) {
   const { userId } = auth();

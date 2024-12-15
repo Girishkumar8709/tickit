@@ -1,14 +1,15 @@
 "use client";
 
+import { useUser } from "@clerk/nextjs";
+import { BarChart, Calendar, Clock, ListTodo, Users } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Calendar, BarChart, Users, Clock } from "lucide-react";
 import { BarLoader } from "react-spinners";
-import { useUser } from "@clerk/nextjs";
 
 const navItems = [
   { href: "/dashboard", label: "Dashboard", icon: BarChart },
   { href: "/events", label: "Events", icon: Calendar },
+  { href: "/tasks", label: "tasks", icon: ListTodo },
   { href: "/meetings", label: "Meetings", icon: Users },
   { href: "/availability", label: "Availability", icon: Clock },
 ];
@@ -20,7 +21,7 @@ export default function AppLayout({ children }) {
   return (
     <>
       {!isLoaded && <BarLoader width={"100%"} color="#36d7b7" />}
-      <div className="flex flex-col h-screen bg-blue-50 md:flex-row">
+      <div className="flex flex-col h-screen bg-orange-50 md:flex-row">
         {/* Sidebar for medium screens and up */}
         <aside className="hidden md:block w-64 bg-white">
           <nav className="mt-8">
@@ -30,7 +31,7 @@ export default function AppLayout({ children }) {
                   <Link
                     href={item.href}
                     className={`flex items-center px-4 py-4 text-gray-700  hover:bg-gray-100 ${
-                      pathname === item.href ? "bg-blue-100" : ""
+                      pathname === item.href ? "bg-orange-100" : ""
                     }`}
                   >
                     <item.icon className="w-5 h-5 mr-3" />
@@ -61,7 +62,7 @@ export default function AppLayout({ children }) {
                 <Link
                   href={item.href}
                   className={`flex flex-col items-center py-2 px-4 ${
-                    pathname === item.href ? "text-blue-600" : "text-gray-600"
+                    pathname === item.href ? "text-orange-600" : "text-gray-600"
                   }`}
                 >
                   <item.icon className="w-6 h-6" />
